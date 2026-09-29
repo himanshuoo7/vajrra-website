@@ -153,7 +153,6 @@ button { font: inherit; }
 .float-card .who { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 12.5px; }
 .float-card .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
 .float-card p { margin: 6px 0 0; color: var(--muted); }
-.card-a { left: -6%; bottom: 14%; width: 270px; animation: bob 7s ease-in-out infinite; }
 .card-b { right: -4%; top: 10%; width: 240px; animation: bob 8s ease-in-out -2s infinite; }
 .card-b .actions { display: flex; gap: 8px; margin-top: 10px; }
 .card-b .actions span { flex: 1; text-align: center; padding: 6px 0; border-radius: 9px; font-size: 12px; font-weight: 600; }
@@ -176,7 +175,7 @@ section { position: relative; }
 .section { padding: clamp(80px, 11vw, 140px) 0; }
 
 /* stats */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; margin-top: 56px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; margin-top: 56px; }
 .stat { background: var(--bg); padding: 30px 26px; }
 .stat strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 58px); line-height: 1; letter-spacing: -0.02em; }
 .stat span { display: block; margin-top: 10px; color: var(--muted); font-size: 14.5px; }
@@ -335,7 +334,6 @@ section { position: relative; }
   .hero-grid, .origin-grid, .products, .panel { grid-template-columns: 1fr; }
   .hero-visual { justify-self: center; max-width: 480px; }
   .panel-visual { border-left: 0; border-top: 1px solid var(--line); }
-  .stats { grid-template-columns: repeat(2, 1fr); }
   .bento { grid-template-columns: repeat(2, 1fr); }
   .tile, .tile.wide { grid-column: span 1; }
   .steps, .feature-grid { grid-template-columns: 1fr; }
@@ -345,13 +343,13 @@ section { position: relative; }
   .app-side { display: none; }
 }
 @media (max-width: 760px) {
+  .stats { grid-template-columns: 1fr; }
   .nav-links, .nav-cta .btn-ghost { display: none; }
   .menu-toggle { display: inline-flex; }
   .mobile-menu.open { display: grid; gap: 4px; padding: 8px var(--gutter) 18px; border-top: 1px solid var(--line); }
   .mobile-menu a { padding: 12px 4px; font-size: 17px; color: var(--muted); border-bottom: 1px solid var(--line); }
   .works-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
   .marquee { width: 100%; }
-  .card-a { left: 0; width: 230px; }
   .card-b { right: 0; width: 210px; }
   .card-c { display: none; }
   .bento { grid-template-columns: 1fr; }
