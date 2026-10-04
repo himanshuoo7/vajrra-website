@@ -4,8 +4,9 @@ The Vajrra company website. Plain HTML, CSS and JavaScript — no build step.
 
 | File | What it is |
 |---|---|
-| `index.html` | Home: hero, industries, products, principles, story, contact |
+| `index.html` | Home: hero, industries, products by customer, principles, story, contact |
 | `divyastra.html` | Divyastra product page |
+| `acrf.html` | aCRF Gen product page (life sciences) |
 | `styles.css`, `main.js` | Shared styles and behaviour (nav, tabs, reveals, contact form) |
 | `assets/` | Logo, favicons, hero art, social share image |
 

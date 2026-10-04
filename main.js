@@ -1,4 +1,4 @@
-// Vajrra site: nav state, mobile menu, industry tabs, scroll reveals, contact form.
+// Vajrra site: nav state, mobile menu, products dropdown, industry tabs, scroll reveals, contact form.
 (() => {
   const nav = document.querySelector(".nav");
   const onScroll = () => nav && nav.classList.toggle("scrolled", window.scrollY > 8);
@@ -19,6 +19,29 @@
         toggle.setAttribute("aria-expanded", "false");
       }),
     );
+  }
+
+  // Products dropdown: click or hover opens it; Escape, a click outside, or
+  // leaving it closes it.
+  const item = document.querySelector(".nav-item");
+  const trigger = item && item.querySelector(".nav-trigger");
+  if (item && trigger) {
+    const setOpen = (open) => {
+      item.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+    };
+    const hover = window.matchMedia("(hover: hover)");
+    // with a mouse, hovering already opened it — a click must not shut it again
+    trigger.addEventListener("click", () => setOpen(hover.matches || !item.classList.contains("open")));
+    item.addEventListener("mouseenter", () => hover.matches && setOpen(true));
+    item.addEventListener("mouseleave", () => hover.matches && setOpen(false));
+    document.addEventListener("click", (e) => !item.contains(e.target) && setOpen(false));
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" || !item.classList.contains("open")) return;
+      setOpen(false);
+      trigger.focus();
+    });
+    item.querySelectorAll(".menu-link").forEach((a) => a.addEventListener("click", () => setOpen(false)));
   }
 
   // Industry tabs (roving tabindex + arrow keys)
@@ -69,7 +92,7 @@
         note.textContent = "Please enter a valid work email.";
         return;
       }
-      const subject = encodeURIComponent("Talk to Vajrra");
+      const subject = encodeURIComponent(form.dataset.subject || "Talk to Vajrra");
       const body = encodeURIComponent(`Hi Vajrra team,\n\nI'd like to learn more.\n\nReach me at: ${email}\n`);
       window.location.href = `mailto:hello@vajrra.ai?subject=${subject}&body=${body}`;
       note.textContent = "Opening your email app…";
