@@ -99,6 +99,32 @@
     });
   }
 
+  // Signed in? The accounts service tells this site who (and only this site):
+  // the header's "Sign in" becomes the person's name, and "Sign up" goes away.
+  const ACCOUNTS = "https://accounts.vajrra.ai";
+  fetch(`${ACCOUNTS}/v1/web-session`, { credentials: "include" })
+    .then((response) => (response.ok ? response.json() : null))
+    .then((session) => {
+      if (!session || session.signedIn !== true) return;
+      const first = String(session.name || "").trim().split(/\s+/)[0].slice(0, 24) || "Account";
+      document.querySelectorAll(".nav-signin").forEach((link) => {
+        link.textContent = "";
+        const initial = document.createElement("span");
+        initial.className = "nav-initial";
+        initial.textContent = first.charAt(0).toUpperCase();
+        link.append(initial, first);
+        link.href = `${ACCOUNTS}/signin/done`;
+        link.title = String(session.email || "");
+        link.classList.add("signed-in");
+      });
+      document.querySelectorAll(`a[href="${ACCOUNTS}/signin?mode=signup"]`).forEach((link) => link.remove());
+      document.querySelectorAll(`.mobile-menu a[href="${ACCOUNTS}/signin"]`).forEach((link) => {
+        link.textContent = `${first} · Your account`;
+        link.href = `${ACCOUNTS}/signin/done`;
+      });
+    })
+    .catch(() => {});
+
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 })();

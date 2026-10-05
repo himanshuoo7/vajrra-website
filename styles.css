@@ -114,6 +114,8 @@ button { font: inherit; }
 .nav .btn { height: 40px; padding: 0 18px; font-size: 14px; }
 .nav-signin { padding: 8px 12px; border-radius: 999px; color: var(--muted); font-size: 14.5px; transition: color 0.2s, background 0.2s; }
 .nav-signin:hover { color: var(--text); background: var(--surface-2); }
+.nav-signin.signed-in { display: inline-flex; align-items: center; gap: 8px; color: var(--text); padding: 5px 12px 5px 5px; border: 1px solid var(--line-2); }
+.nav-initial { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--blue)); color: var(--bg); font-size: 13px; font-weight: 700; }
 /* products dropdown */
 .nav-item { position: relative; }
 .nav-trigger {
