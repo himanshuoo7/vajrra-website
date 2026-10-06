@@ -1,0 +1,18 @@
+aCRF check against the FDA PDF Specifications v4.1 (Sept 2016)
+
+13 passed, 0 failed, 1 to review
+
+[PASS] PDF version 1.4-1.7                                     PDF 1.4
+[PASS] No security or password                                 not encrypted
+[PASS] No JavaScript                                           0 object(s) with JavaScript
+[PASS] No attachments, multimedia or 3D                        0 such object(s)
+[PASS] No PDF annotations (annotation boxes are page content)  none
+[PASS] Non-standard fonts embedded                             all embedded
+[WARN] Embedded fonts are full, not subsets                    4 subset font(s) from the blank CRF (AAAAAA+LiberationSans-Bold, BAAAAA+LiberationSans, CAAAAA+DejaVuSans, ...); re-export the blank CRF with full fonts if your submission requires it
+[PASS] Pages fit 8.5x11in / A4                                 all pages
+[PASS] Text searchable (not scanned images)                    every page has text
+[PASS] Bookmarks in documents of 5+ pages                      23 bookmark(s)
+[PASS] Bookmarks use Inherit Zoom                              inherit zoom
+[PASS] Opens to Bookmarks Panel and Page                       PageMode /UseOutlines
+[PASS] Optimized for Fast Web View (linearized)                linearized
+[PASS] File name lower case, no special characters             acrf.pdf

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -84,10 +84,10 @@
       <div class="wrap">
         <span class="eyebrow">Life sciences · Early access</span>
         <h1 class="display">Annotated CRFs in <em>minutes, not days.</em></h1>
-        <p class="lede">aCRF Gen reads a blank case report form and drafts its SDTM annotations — domains, variables and the conditions behind them — so your team reviews instead of typing. Nothing is final until a person signs it off.</p>
+        <p class="lede">aCRF Gen reads a blank case report form and your EDC study design, and drafts the SDTM annotations — domains, variables and the conditions behind them — so your team reviews instead of typing. Every draft is for qualified review before it goes anywhere.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#demo">Request a demo <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="#how">How it works</a>
+          <a class="btn btn-primary" href="#demo">Request a pilot <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="proof.html">See the proof</a>
         </div>
 
         <div class="crf-mock" role="img" aria-label="Example: a Vital Signs CRF page with SDTM annotations beside each field">
@@ -112,9 +112,9 @@
           <h2 class="h2">Upload. Review. <em>Submit.</em></h2>
         </div>
         <div class="steps">
-          <div class="step reveal"><h3>Upload the blank CRF</h3><p>The PDF straight from your EDC or study build — no reformatting.</p></div>
+          <div class="step reveal"><h3>Upload the blank CRF</h3><p>The PDF straight from your EDC or study build, with its study design export (CDISC ODM-XML or Medidata Rave ALS) — no reformatting.</p></div>
           <div class="step reveal"><h3>The agent drafts annotations</h3><p>Each field is mapped to its SDTM domain and variable, with the conditions that qualify it. Anything uncertain is flagged, not guessed.</p></div>
-          <div class="step reveal"><h3>Review and export</h3><p>Accept, edit or reject each annotation, then export the annotated PDF for your submission package.</p></div>
+          <div class="step reveal"><h3>Review and export</h3><p>Ask for changes in plain English — change, remove, add or move any annotation — then download the aCRF, its review workbook, an FDA PDF check and the audit trail.</p></div>
         </div>
       </div>
     </section>
@@ -138,23 +138,23 @@
           </div>
           <div class="tile reveal">
             <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <h3>Human sign-off</h3>
-            <p>Every annotation is reviewed and approved by your team before anything is exported.</p>
+            <h3>Draft for your review</h3>
+            <p>The agent drafts; your reviewer checks and edits. Each annotation's source — CDISC rule, model or fuzzy match — is in the review workbook.</p>
           </div>
           <div class="tile reveal">
             <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-            <h3>Every decision on the record</h3>
-            <p>An audit trail of what was drafted, changed and approved — and by whom — for QA and inspections.</p>
+            <h3>Every change on the record</h3>
+            <p>A tamper-evident audit trail of every upload, run and edit — who, when, and the value before and after — for QA and inspections.</p>
           </div>
           <div class="tile reveal">
             <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            <h3>Your data stays yours</h3>
-            <p>Runs on your machine or in your own cloud, on the models your security team approves.</p>
+            <h3>Your files, briefly held</h3>
+            <p>Study metadata only, processed in Mumbai and deleted after 7 days. The AI provider doesn't train on it. <a href="trust.html">Details</a></p>
           </div>
           <div class="tile reveal">
             <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>Part of the pipeline</h3>
-            <p>Works alongside SDTM Navigator and CORE validation inside Divyastra, from CRF to submission-ready datasets.</p>
+            <h3>FDA-ready PDF</h3>
+            <p>Checked against the FDA's PDF Specifications for eCTD on every run: embedded fonts, bookmarks by domain and visit, no annotations or JavaScript.</p>
           </div>
         </div>
       </div>
@@ -164,13 +164,14 @@
       <div class="wrap reveal">
         <span class="eyebrow">Early access</span>
         <h2 class="h2">See it on <em>your own CRF.</em></h2>
-        <p class="lede">We're onboarding a small group of CROs, biotech and pharma teams. Leave your work email and we'll set up a demo on a CRF of your choice.</p>
+        <p class="lede">We're onboarding a small group of CROs, biotechs and SDTM consultants. Send five pages of a blank CRF with its EDC export and we'll return a draft aCRF within 24 hours. <a href="proof.html">See it on a public study first.</a></p>
         <form class="contact-form" data-subject="aCRF Gen demo request" novalidate>
           <label class="skip" for="email">Work email</label>
           <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
-          <button class="btn btn-primary" type="submit">Request a demo <span class="arrow" aria-hidden="true">→</span></button>
+          <button class="btn btn-primary" type="submit">Request a pilot <span class="arrow" aria-hidden="true">→</span></button>
         </form>
         <p class="form-note" role="status"></p>
+        <p class="download-note">Already invited? <a href="https://accounts.vajrra.ai/acrf">Open aCRF Gen →</a></p>
       </div>
     </section>
   </main>
@@ -184,7 +185,7 @@
         </div>
         <div>
           <h4>Products</h4>
-          <ul><li><a href="divyastra.html">Divyastra</a></li><li><a href="acrf.html">aCRF Gen</a></li><li><a href="index.html#customer-support">Support agents · soon</a></li><li><a href="index.html#healthcare">Care admin agents · soon</a></li></ul>
+          <ul><li><a href="divyastra.html">Divyastra</a></li><li><a href="acrf.html">aCRF Gen</a></li><li><a href="proof.html">aCRF Gen proof</a></li><li><a href="index.html#customer-support">Support agents · soon</a></li><li><a href="index.html#healthcare">Care admin agents · soon</a></li></ul>
         </div>
         <div>
           <h4>Industries</h4>
@@ -192,7 +193,7 @@
         </div>
         <div>
           <h4>Company</h4>
-          <ul><li><a href="index.html#story">Our story</a></li><li><a href="index.html#principles">Principles</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="mailto:hello@vajrra.ai">hello@vajrra.ai</a></li></ul>
+          <ul><li><a href="index.html#story">Our story</a></li><li><a href="index.html#principles">Principles</a></li><li><a href="trust.html">Trust and security</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="mailto:hello@vajrra.ai">hello@vajrra.ai</a></li></ul>
         </div>
       </div>
       <div class="wordmark" aria-hidden="true">Vajrra</div>
@@ -203,6 +204,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=5" defer></script>
+  <script src="main.js?v=6" defer></script>
 </body>
 </html>
