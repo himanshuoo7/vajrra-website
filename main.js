@@ -102,6 +102,18 @@
   // Signed in? The accounts service tells this site who (and only this site):
   // the header's "Sign in" becomes the person's name, and "Sign up" goes away.
   const ACCOUNTS = "https://accounts.vajrra.ai";
+  // Signing out is a POST to the accounts service, which ends the session and
+  // comes back to the website.
+  const signOutForm = (label = "Sign out") => {
+    const form = document.createElement("form");
+    form.method = "post";
+    form.action = `${ACCOUNTS}/signout`;
+    const button = document.createElement("button");
+    button.type = "submit";
+    button.textContent = label;
+    form.append(button);
+    return form;
+  };
   fetch(`${ACCOUNTS}/v1/web-session`, { credentials: "include" })
     .then((response) => (response.ok ? response.json() : null))
     .then((session) => {
@@ -113,14 +125,37 @@
         initial.className = "nav-initial";
         initial.textContent = first.charAt(0).toUpperCase();
         link.append(initial, first);
-        link.href = `${ACCOUNTS}/signin/done`;
-        link.title = String(session.email || "");
+        link.removeAttribute("href");
+        link.setAttribute("role", "button");
+        link.setAttribute("tabindex", "0");
+        link.setAttribute("aria-haspopup", "true");
+        link.setAttribute("aria-expanded", "false");
         link.classList.add("signed-in");
+        // The name opens a small account menu: who you are, and sign out.
+        const menu = document.createElement("div");
+        menu.className = "account-menu";
+        const who = document.createElement("span");
+        who.className = "account-email";
+        who.textContent = String(session.email || "");
+        menu.append(who, signOutForm());
+        const holder = document.createElement("div");
+        holder.className = "account";
+        link.replaceWith(holder);
+        holder.append(link, menu);
+        const toggle = (open) => {
+          holder.classList.toggle("open", open);
+          link.setAttribute("aria-expanded", String(open));
+        };
+        link.addEventListener("click", (event) => { event.stopPropagation(); toggle(!holder.classList.contains("open")); });
+        link.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); toggle(!holder.classList.contains("open")); } });
+        document.addEventListener("click", (event) => { if (!holder.contains(event.target)) toggle(false); });
+        document.addEventListener("keydown", (event) => { if (event.key === "Escape") toggle(false); });
       });
       document.querySelectorAll(`a[href="${ACCOUNTS}/signin?mode=signup"]`).forEach((link) => link.remove());
       document.querySelectorAll(`.mobile-menu a[href="${ACCOUNTS}/signin"]`).forEach((link) => {
-        link.textContent = `${first} · Your account`;
-        link.href = `${ACCOUNTS}/signin/done`;
+        const form = signOutForm(`Sign out (${first})`);
+        form.classList.add("mobile-signout");
+        link.replaceWith(form);
       });
     })
     .catch(() => {});
