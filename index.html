@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vajrra — Specialist AI agents for life sciences &amp; healthcare</title>
   <meta name="description" content="Vajrra builds specialist AI agents for customer support, healthcare and life sciences — precise, auditable, and always answerable to a human." />
-  <meta name="theme-color" content="#06041a" />
+  <meta name="theme-color" content="#0e0e11" />
   <link rel="canonical" href="https://vajrra.ai/" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <script type="application/ld+json">
     {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://vajrra.ai/#org","name":"Vajrra","url":"https://vajrra.ai/","logo":"https://vajrra.ai/assets/logo-mark.png","email":"hello@vajrra.ai","description":"Vajrra builds specialist AI agents for customer support, healthcare and life sciences."},{"@type":"WebSite","@id":"https://vajrra.ai/#site","url":"https://vajrra.ai/","name":"Vajrra","publisher":{"@id":"https://vajrra.ai/#org"}}]}
   </script>
@@ -31,7 +31,6 @@
     <div class="wrap nav-inner">
       <a class="brand" href="/" aria-label="Vajrra home"><img src="assets/logo-mark.png" alt="" width="30" height="30" />Vajrra</a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#industries">Industries</a>
         <div class="nav-item">
           <button class="nav-trigger" aria-expanded="false" aria-controls="products-menu">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
           <div class="nav-menu" id="products-menu">
@@ -56,6 +55,7 @@
           </div>
         </div>
         <a href="#principles">Principles</a>
+        <a href="trust.html">Trust</a>
         <a href="#story">Our story</a>
         <a href="client-ss-women-child-hospital.html">Case study</a>
       </nav>
@@ -78,8 +78,8 @@
       <a href="https://accounts.vajrra.ai/signin">Sign in</a>
       <a href="https://accounts.vajrra.ai/signin?mode=signup">Sign up</a>
       <span class="mobile-label">Company</span>
-      <a href="#industries">Industries</a>
       <a href="#principles">Principles</a>
+      <a href="trust.html">Trust</a>
       <a href="#story">Our story</a>
       <a href="client-ss-women-child-hospital.html">Case study</a>
       <a href="#contact">Talk to us</a>
@@ -92,13 +92,17 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Applied AI company</span>
-          <h1 class="display">AI agents with the force of a <em>thunderbolt.</em></h1>
-          <p class="lede">Vajrra builds specialist AI agents for customer support, healthcare and life sciences — precise enough for regulated work, fast enough to feel like lightning, and always answerable to a human.</p>
+          <h1 class="display">Specialist AI agents, <em>swift as a thunderbolt.</em></h1>
+          <p class="lede">Vajrra builds AI that does one job deeply well. Use it today to draft SDTM-annotated CRFs in minutes, or to get a scored audit of any website in about five. Every agent drafts; a person decides.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">Talk to us <span class="arrow" aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="audit.html">Audit a website</a>
+            <a class="btn btn-primary" href="audit.html">Audit a website free <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="acrf.html">Explore aCRF Gen</a>
           </div>
-          <p class="hero-note">Human approval on every consequential action · Full audit trail</p>
+          <ul class="hero-trust">
+            <li>Human approval on consequential actions</li>
+            <li>Evidence behind every finding</li>
+            <li>Your data is never sold</li>
+          </ul>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
@@ -107,146 +111,77 @@
       </div>
     </section>
 
-
-    <!-- Why -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow">Why Vajrra</span>
-          <h2 class="h2">General AI is broad. <em>Your work is specific.</em></h2>
-          <p class="lede">We build agents that know one domain deeply, work with the tools you already use, and ask before they act. Specialists you can hand real work to — not chatbots you have to babysit.</p>
-        </div>
-        <div class="stats reveal">
-          <div class="stat"><strong>8</strong><span>scored checks in every website audit</span></div>
-          <div class="stat"><strong>~5 min</strong><span>from a web address to a scored PDF</span></div>
-          <div class="stat"><strong>1</strong><span>free audit per account, then $2</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Industries -->
-    <section class="section" id="industries" style="padding-top: 0">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow">Industries</span>
-          <h2 class="h2">Built for work where <em>precision matters.</em></h2>
-        </div>
-
-        <div class="tabs reveal" role="tablist" aria-label="Industries">
-          <button class="tab" role="tab" id="tab-support" aria-controls="panel-support" aria-selected="true">Customer support</button>
-          <button class="tab" role="tab" id="tab-health" aria-controls="panel-health" aria-selected="false" tabindex="-1">Healthcare</button>
-          <button class="tab" role="tab" id="tab-life" aria-controls="panel-life" aria-selected="false" tabindex="-1">Life sciences</button>
-        </div>
-
-        <div class="panel reveal" role="tabpanel" id="panel-support" aria-labelledby="tab-support">
-          <div class="panel-copy">
-            <span class="eyebrow">Customer support</span>
-            <h3>Agents that resolve, not deflect.</h3>
-            <p>Give every customer a fast, accurate answer — and keep a person in command of anything that touches money, accounts or promises.</p>
-            <ul class="uses">
-              <li>Triage and draft replies from your own help docs and past tickets</li>
-              <li>Refunds, credits and account changes behind one-click approvals</li>
-              <li>Hand off to a human with the full context already written up</li>
-              <li>Every action recorded, so QA and compliance can see exactly what happened</li>
-            </ul>
-          </div>
-          <div class="panel-visual" aria-hidden="true">
-            <div class="msg user">My order arrived damaged. Can I get a refund?</div>
-            <div class="msg bot"><span class="tag">SUPPORT AGENT</span>Sorry about that — I've checked order #48213 and it qualifies. I've prepared a full refund for your approval.</div>
-            <div class="approval"><b>Approval needed</b> · Refund ₹2,400 to original payment method<div class="row"><span>Approve</span><span>Deny</span></div></div>
-          </div>
-        </div>
-
-        <div class="panel" role="tabpanel" id="panel-health" aria-labelledby="tab-health" hidden>
-          <div class="panel-copy">
-            <span class="eyebrow">Healthcare</span>
-            <h3>Less paperwork. More time for patients.</h3>
-            <p>Agents that take on the administrative load around care — drafting, summarising and assembling — while clinicians stay the decision-makers.</p>
-            <ul class="uses">
-              <li>Draft visit summaries, referral letters and discharge notes for review</li>
-              <li>Assemble prior-authorisation packets from the chart and payer policy</li>
-              <li>Answer policy and guideline questions with sources attached</li>
-              <li>Every draft reviewed by a clinician before anything is used</li>
-            </ul>
-          </div>
-          <div class="panel-visual" aria-hidden="true">
-            <div class="msg user">Draft the referral letter for today's cardiology consult.</div>
-            <div class="msg bot"><span class="tag">CARE ADMIN AGENT</span>Draft ready: reason for referral, relevant history, current medications and recent labs. Two fields need your confirmation.</div>
-            <div class="approval"><b>Review needed</b> · Send referral to Dr. Rao's clinic<div class="row"><span>Approve</span><span>Edit</span></div></div>
-          </div>
-        </div>
-
-        <div class="panel" role="tabpanel" id="panel-life" aria-labelledby="tab-life" hidden>
-          <div class="panel-copy">
-            <span class="eyebrow">Life sciences</span>
-            <h3>Annotated CRFs, drafted in minutes.</h3>
-            <p>Upload a blank case report form and get an SDTM-annotated draft back, with every mapping visible for a qualified person to review.</p>
-            <ul class="uses">
-              <li><a href="acrf.html"><strong>aCRF Gen</strong></a> — every field mapped to its SDTM domain and variable</li>
-              <li>Review the draft before you export or submit anything</li>
-              <li>Uploaded files are deleted after 7 days</li>
-            </ul>
-          </div>
-          <div class="panel-visual" aria-hidden="true">
-            <div class="msg user">Annotate the blank CRF I just uploaded.</div>
-            <div class="msg bot"><span class="tag">ACRF GEN</span>Draft ready: each field mapped to its SDTM domain and variable. Anything I was unsure about is flagged for your review.</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section class="section" id="products" style="padding-top: 0">
+    <!-- Products: live now -->
+    <section class="section section-tight" id="products">
       <div class="wrap">
         <div class="section-head reveal">
           <span class="eyebrow">Products</span>
-          <h2 class="h2">An astra for <em>every kind of work.</em></h2>
-          <p class="lede">Each astra is a specialist product for one kind of customer. Every one keeps a human in charge and is honest about what is automated.</p>
+          <h2 class="h2">Use it today. <em>See results in minutes.</em></h2>
+          <p class="lede">Each astra is a specialist product for one kind of work, honest about what is automated and what needs a person.</p>
         </div>
 
-        <div class="astras">
-          <article class="product flagship astra reveal" id="life-sciences">
+        <div class="live-grid">
+          <article class="live-card reveal" id="life-sciences">
             <div class="astra-top"><span class="pill"><span class="live"></span>Early access</span><span class="astra-for">Life sciences</span></div>
             <h3>aCRF Gen</h3>
-            <div class="sub">SDTM-annotated CRFs, in minutes</div>
             <p>Upload a blank case report form and get back an annotated draft: every field mapped to its SDTM domain and variable, ready for your review.</p>
-            <div class="feature-chips"><span>CDISC SDTM</span><span>Review before export</span><span>Audit trail</span></div>
-            <div class="spacer"></div>
-            <a class="btn btn-primary" href="acrf.html">Explore aCRF Gen <span class="arrow" aria-hidden="true">→</span></a>
+            <div class="mini-crf" aria-hidden="true">
+              <div class="mini-crf-title"><b>Vital signs</b><span class="anno vs">VS</span></div>
+              <div class="mini-crf-row"><span>Date of assessment</span><span class="anno vs">VSDTC</span></div>
+              <div class="mini-crf-row"><span>Systolic blood pressure</span><span class="anno vs">VSTESTCD = SYSBP</span></div>
+              <div class="mini-crf-row"><span>Sex</span><span class="anno dm">DM.SEX</span></div>
+            </div>
+            <ul class="facts">
+              <li>CDISC SDTM domains and variables</li>
+              <li>Unsure mappings flagged for review</li>
+              <li>Uploads deleted after 7 days</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="acrf.html">Explore aCRF Gen <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="text-link" href="proof.html">See the proof →</a>
+            </div>
           </article>
 
-          <article class="product astra reveal" id="website-audit">
+          <article class="live-card reveal" id="website-audit">
             <div class="astra-top"><span class="pill"><span class="live"></span>Live</span><span class="astra-for">Any business</span></div>
             <h3>Website Audit</h3>
-            <div class="sub">A scored report for any website</div>
-            <p>SEO, speed, security, QA, conversion and UI/UX in one PDF, with fixes ranked by impact. First audit free with code DECEMBER, then $2.</p>
-            <div class="feature-chips"><span>PDF report</span><span>About 5 minutes</span><span>First audit free</span></div>
-            <div class="spacer"></div>
-            <a class="btn btn-primary" href="audit.html">Audit a website <span class="arrow" aria-hidden="true">→</span></a>
+            <p>SEO, speed, security, QA, conversion and UI/UX in one scored PDF, with every fix ranked by impact so you know what to do first.</p>
+            <div class="mini-scores" aria-hidden="true">
+              <div class="mini-score"><span>SEO</span><i style="--v: 82%"></i><b>82</b></div>
+              <div class="mini-score"><span>Speed</span><i class="warn" style="--v: 61%"></i><b>61</b></div>
+              <div class="mini-score"><span>Security</span><i style="--v: 90%"></i><b>90</b></div>
+              <div class="mini-score"><span>Conversion</span><i class="warn" style="--v: 54%"></i><b>54</b></div>
+            </div>
+            <ul class="facts">
+              <li>8 scored checks, about 5 minutes</li>
+              <li>First audit free with code <strong>DECEMBER</strong></li>
+              <li>Then $2 per audit</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="audit.html">Audit a website <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="text-link" href="sample-report.html">Sample report →</a>
+            </div>
           </article>
+        </div>
 
-          <article class="product soon astra reveal" id="customer-support">
-            <div class="astra-top"><span class="pill">Releasing soon</span><span class="astra-for">Customer support</span></div>
-            <h3>Support agents</h3>
-            <p>Agents that resolve tickets from your own help docs and past answers, with refunds and account changes behind one-click approvals.</p>
-            <div class="spacer"></div>
-            <a class="btn btn-ghost" href="mailto:hello@vajrra.ai?subject=Support%20agents%20%E2%80%94%20early%20access">Join the waitlist</a>
-          </article>
-
-          <article class="product soon astra reveal" id="healthcare">
-            <div class="astra-top"><span class="pill">Releasing soon</span><span class="astra-for">Healthcare</span></div>
-            <h3>Care admin agents</h3>
+        <div class="soon-list reveal">
+          <span class="soon-label">Releasing soon</span>
+          <div class="soon-row" id="customer-support">
+            <div><strong>Support agents</strong><span class="astra-for">Customer support</span></div>
+            <p>Resolve tickets from your own help docs and past answers, with refunds and account changes behind one-click approvals.</p>
+            <a class="btn btn-ghost btn-sm" href="mailto:hello@vajrra.ai?subject=Support%20agents%20%E2%80%94%20early%20access">Join the waitlist</a>
+          </div>
+          <div class="soon-row" id="healthcare">
+            <div><strong>Care admin agents</strong><span class="astra-for">Healthcare</span></div>
             <p>Referral letters, visit summaries and prior-authorisation packets drafted from the chart, for clinicians to review and sign off.</p>
-            <div class="spacer"></div>
-            <a class="btn btn-ghost" href="mailto:hello@vajrra.ai?subject=Care%20admin%20agents%20%E2%80%94%20early%20access">Join the waitlist</a>
-          </article>
+            <a class="btn btn-ghost btn-sm" href="mailto:hello@vajrra.ai?subject=Care%20admin%20agents%20%E2%80%94%20early%20access">Join the waitlist</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Case study -->
-    <section class="section" id="our-work" style="padding-top: 0">
+    <section class="section section-tight" id="our-work" style="padding-top: 0">
       <div class="wrap">
         <article class="product flagship platform-band reveal">
           <div>
@@ -264,38 +199,39 @@
     </section>
 
     <!-- Principles -->
-    <section class="section" id="principles" style="padding-top: 0">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow">Principles</span>
-          <h2 class="h2">Powerful agents. <em>Firm guardrails.</em></h2>
+    <section class="section" id="principles">
+      <div class="wrap principles-grid">
+        <div>
+          <div class="section-head reveal">
+            <span class="eyebrow">Principles</span>
+            <h2 class="h2">Powerful agents. <em>Firm guardrails.</em></h2>
+            <p class="lede">Specialists you can hand real work to, not chatbots you have to babysit.</p>
+          </div>
+          <div class="principles reveal">
+            <div class="principle">
+              <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <div><h3>Humans stay in command</h3><p>Agents draft; people decide. Nothing is sent or submitted on your behalf without approval.</p></div>
+            </div>
+            <div class="principle">
+              <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+              <div><h3>Every action on the record</h3><p>Evidence behind each finding, and a clear line between automated checks and AI suggestions.</p></div>
+            </div>
+            <div class="principle">
+              <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div><h3>Your data stays yours</h3><p>Files are processed only to do the job (aCRF uploads are deleted after 7 days). We never sell your data.</p></div>
+            </div>
+            <div class="principle">
+              <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+              <div><h3>Specialists, not generalists</h3><p>Each agent carries real domain expertise: standards, rules and workflows.</p></div>
+            </div>
+          </div>
+          <a class="text-link reveal" href="trust.html">Read about trust and security →</a>
         </div>
-        <div class="bento">
-          <div class="tile wide reveal">
-            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-            <h3>Humans stay in command</h3>
-            <p>Our agents draft; people decide. Every aCRF draft is reviewed by a qualified person before use, and nothing is sent or submitted on your behalf.</p>
-          </div>
-          <div class="tile wide reveal">
-            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-            <h3>Every action on the record</h3>
-            <p>Reports show the evidence behind each finding and mark what was checked automatically and what is an AI suggestion. Built for teams that answer to auditors.</p>
-          </div>
-          <div class="tile reveal">
-            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            <h3>Your data stays yours</h3>
-            <p>Files you upload are processed on our servers only to do the job (aCRF uploads are deleted after 7 days). We never sell your data.</p>
-          </div>
-          <div class="tile reveal">
-            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg></div>
-            <h3>Honest about AI</h3>
-            <p>AI output is labelled as a suggestion, and scores come from checks you can see, so you know what to trust.</p>
-          </div>
-          <div class="tile reveal">
-            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>Specialists, not generalists</h3>
-            <p>Domain plugins carry real expertise — standards, rules and workflows.</p>
-          </div>
+        <div class="panel-visual principles-visual reveal" aria-hidden="true">
+          <div class="msg user">My order arrived damaged. Can I get a refund?</div>
+          <div class="msg bot"><span class="tag">SUPPORT AGENT</span>Sorry about that. Order #48213 qualifies, so I've prepared a full refund for your approval.</div>
+          <div class="approval"><b>Approval needed</b> · Refund ₹2,400 to original payment method<div class="row"><span>Approve</span><span>Deny</span></div></div>
+          <p class="visual-caption">Anything that touches money, accounts or promises waits for a person.</p>
         </div>
       </div>
     </section>
@@ -304,12 +240,13 @@
     <section class="section" style="padding-top: 0">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">How it works</span>
+          <span class="eyebrow">For teams</span>
           <h2 class="h2">From problem to <em>agent team</em> in weeks.</h2>
+          <p class="lede">Need something our products don't cover yet? We build specialist agents around your own workflow.</p>
         </div>
         <div class="steps">
           <div class="step reveal"><h3>Map the work</h3><p>We sit with your team, find the repetitive, rules-heavy work, and agree where a human must stay in the loop.</p></div>
-          <div class="step reveal"><h3>Assemble specialists</h3><p>We configure agents with your tools, documents and standards — on the models your security team approves.</p></div>
+          <div class="step reveal"><h3>Assemble specialists</h3><p>We configure agents with your tools, documents and standards, on the models your security team approves.</p></div>
           <div class="step reveal"><h3>Ship with guardrails</h3><p>Agents go live behind approvals and a full audit trail, then improve from every review.</p></div>
         </div>
       </div>
@@ -339,13 +276,19 @@
       <div class="wrap reveal">
         <span class="eyebrow">Talk to us</span>
         <h2 class="h2">Hand your hardest work to <em>specialists.</em></h2>
-        <p class="lede">Tell us about the work you'd hand to an agent. We'll reply within one business day.</p>
-        <form class="contact-form" novalidate>
-          <label class="skip" for="email">Work email</label>
-          <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+        <p class="lede">Tell us about the work you'd hand to an agent. We reply within one business day.</p>
+        <form class="contact-card" novalidate>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="message">What should the agent do? <span>(optional)</span></label>
+            <textarea id="message" name="message" rows="3" placeholder="e.g. Draft aCRFs for our oncology studies, or answer support tickets from our help docs"></textarea>
+          </div>
           <button class="btn btn-primary" type="submit">Get in touch <span class="arrow" aria-hidden="true">→</span></button>
+          <p class="form-note" role="status">Opens your email app. Or write to <a href="mailto:hello@vajrra.ai">hello@vajrra.ai</a>.</p>
         </form>
-        <p class="form-note" role="status"></p>
       </div>
     </section>
   </main>
@@ -363,7 +306,7 @@
         </div>
         <div>
           <h4>Industries</h4>
-          <ul><li><a href="#industries">Customer support</a></li><li><a href="#industries">Healthcare</a></li><li><a href="#industries">Life sciences</a></li></ul>
+          <ul><li><a href="#life-sciences">Life sciences</a></li><li><a href="#healthcare">Healthcare</a></li><li><a href="#customer-support">Customer support</a></li><li><a href="#website-audit">Any business</a></li></ul>
         </div>
         <div>
           <h4>Company</h4>
@@ -378,6 +321,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=7" defer></script>
+  <script src="main.js?v=8" defer></script>
 </body>
 </html>

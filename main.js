@@ -82,18 +82,23 @@
   }
 
   // Contact form: no backend yet — hand the address to the visitor's mail app.
-  const form = document.querySelector(".contact-form");
+  const form = document.querySelector(".contact-form, .contact-card");
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = form.querySelector("input").value.trim();
+      const input = form.querySelector('input[type="email"]');
+      const email = input.value.trim();
+      const message = (form.querySelector("textarea")?.value || "").trim();
       const note = document.querySelector(".form-note");
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        input.setAttribute("aria-invalid", "true");
+        input.focus();
         note.textContent = "Please enter a valid work email.";
         return;
       }
+      input.removeAttribute("aria-invalid");
       const subject = encodeURIComponent(form.dataset.subject || "Talk to Vajrra");
-      const body = encodeURIComponent(`Hi Vajrra team,\n\nI'd like to learn more.\n\nReach me at: ${email}\n`);
+      const body = encodeURIComponent(`Hi Vajrra team,\n\n${message || "I'd like to learn more."}\n\nReach me at: ${email}\n`);
       window.location.href = `mailto:hello@vajrra.ai?subject=${subject}&body=${body}`;
       note.textContent = "Opening your email app…";
     });
