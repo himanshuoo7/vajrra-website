@@ -287,6 +287,8 @@ section { position: relative; }
 .anno { justify-self: start; font-family: var(--mono); font-size: 12px; padding: 5px 9px; border-radius: 6px; border: 1.5px solid; background: #fff; line-height: 1.4; }
 .anno.vs { border-color: #2f7fe0; color: #1d5fb0; background: #eef5ff; }
 .anno.dm { border-color: #c2851f; color: #8a5a10; background: #fff6e6; }
+.anno.err { border-color: #d6455d; color: #a3243b; background: #fdeef1; }
+.anno.warn { border-color: #c2851f; color: #8a5a10; background: #fff6e6; }
 .anno.note { border-style: dashed; border-color: #8a839f; color: #5f5876; background: #f4f2f8; }
 
 /* principles bento */
@@ -556,3 +558,7 @@ section { position: relative; }
 .account-menu button, .mobile-signout button { width: 100%; text-align: left; padding: 9px 10px; border: 0; border-radius: 10px; background: none; color: var(--text); font: inherit; font-size: 14.5px; cursor: pointer; }
 .account-menu button:hover { background: var(--surface-2); }
 .mobile-signout button { padding: 12px 0; color: var(--muted); font-size: 16px; }
+
+/* ADaM Preflight: install line */
+.code-block { max-width: 640px; margin: 28px 0 0; padding: 16px 20px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--bg-2); overflow-x: auto; }
+.code-block code { font-family: var(--mono); font-size: 14px; color: var(--text); white-space: pre; }

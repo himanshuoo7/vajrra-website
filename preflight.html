@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADaM Preflight — catch ADaM errors in the spec · Vajrra</title>
+  <meta name="description" content="ADaM Preflight validates ADaM specifications and datasets against the CDISC ADaM conformance rules, Controlled Terminology and Define-XML rules, with PMDA and FDA ratings on every finding." />
+  <meta name="theme-color" content="#0e0e11" />
+  <link rel="canonical" href="https://vajrra.ai/preflight.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Vajrra" />
+  <meta property="og:title" content="ADaM Preflight — catch ADaM errors in the spec" />
+  <meta property="og:description" content="Validate ADaM specs and datasets against CDISC, PMDA and FDA rules, before the rework." />
+  <meta property="og:url" content="https://vajrra.ai/preflight.html" />
+  <meta property="og:image" content="https://vajrra.ai/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ADaM Preflight","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS, Linux","url":"https://vajrra.ai/preflight.html","description":"Validates CDISC ADaM specifications and datasets against the ADaM conformance rules, Controlled Terminology and Define-XML rules.","publisher":{"@type":"Organization","name":"Vajrra","url":"https://vajrra.ai/"}}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Vajrra home"><img src="assets/logo-mark.png" alt="" width="30" height="30" />Vajrra</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="trust.html">Trust</a>
+        <div class="nav-item">
+          <button class="nav-trigger" aria-expanded="false" aria-controls="products-menu">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="nav-menu" id="products-menu">
+            <div class="nav-menu-inner">
+              <div class="menu-group">
+                <span class="menu-label">Life sciences</span>
+                <a class="menu-link" href="acrf.html"><strong>aCRF Gen <em class="badge">Early access</em></strong><small>SDTM-annotated CRFs, drafted in minutes.</small></a>
+                <a class="menu-link" href="preflight.html" aria-current="page"><strong>ADaM Preflight <em class="badge">Early access</em></strong><small>ADaM specs and datasets, checked against CDISC rules.</small></a>
+              </div>
+              <div class="menu-group">
+                <span class="menu-label">Any business</span>
+                <a class="menu-link" href="audit.html"><strong>Website Audit <em class="badge">New</em></strong><small>A scored SEO, speed and security report for any site.</small></a>
+              </div>
+              <div class="menu-group">
+                <span class="menu-label">Customer support</span>
+                <a class="menu-link soon" href="index.html#customer-support"><strong>Support agents <em class="badge soon">Releasing soon</em></strong><small>Resolve tickets from your own docs, with approvals.</small></a>
+              </div>
+              <div class="menu-group">
+                <span class="menu-label">Healthcare</span>
+                <a class="menu-link soon" href="index.html#healthcare"><strong>Care admin agents <em class="badge soon">Releasing soon</em></strong><small>Referrals, summaries and prior-auth packets, drafted.</small></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#story">Our story</a>
+        <a href="client-ss-women-child-hospital.html">Clients</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="nav-signin" href="https://accounts.vajrra.ai/signin">Sign in</a>
+        <a class="btn btn-ghost" href="https://accounts.vajrra.ai/signin?mode=signup">Sign up</a>
+        <a class="btn btn-primary" href="#access">Request access</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <span class="mobile-label">Products</span>
+      <a href="acrf.html">aCRF Gen <em class="badge">Early access</em></a>
+      <a href="preflight.html">ADaM Preflight <em class="badge">Early access</em></a>
+      <a href="audit.html">Website Audit <em class="badge">New</em></a>
+      <a href="index.html#customer-support">Support agents <em class="badge soon">Soon</em></a>
+      <a href="index.html#healthcare">Care admin agents <em class="badge soon">Soon</em></a>
+      <span class="mobile-label">Account</span>
+      <a href="https://accounts.vajrra.ai/signin">Sign in</a>
+      <a href="https://accounts.vajrra.ai/signin?mode=signup">Sign up</a>
+      <span class="mobile-label">Company</span>
+      <a href="trust.html">Trust</a>
+      <a href="index.html#story">Our story</a>
+      <a href="client-ss-women-child-hospital.html">Clients</a>
+      <a href="#access">Request access</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">Life sciences · Early access</span>
+        <h1 class="display">Catch ADaM errors <em>in the spec.</em></h1>
+        <p class="lede">ADaM Preflight validates your ADaM specification — Excel or define.xml — against the CDISC rules before a single dataset exists, and checks the datasets when they do. Every finding cites the rule behind it and shows how PMDA rates it, so problems are fixed in the spec, not found at database lock.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#access">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="preflight-proof.html">See the proof</a>
+        </div>
+
+        <div class="crf-mock" role="img" aria-label="Example: findings from an ADaM specification, each with its rule and PMDA severity">
+          <div class="app-bar"><i></i><i></i><i></i><b>ADaM spec — preflight report · ADaMIG 1.3 · CT 2025-03-28</b></div>
+          <div class="crf-page">
+            <div class="crf-title"><b>FINDINGS</b><span>rule · regulator view</span></div>
+            <div class="crf-row"><div class="crf-field">ADAE.TRTEMFL <i>codelist allows N</i></div><span class="anno err">ADCR-269 · PMDA Error</span></div>
+            <div class="crf-row"><div class="crf-field">ADSL.RANDFL <i>codelist has only Y</i></div><span class="anno warn">ADCR-24 · cannot be null</span></div>
+            <div class="crf-row"><div class="crf-field">ADSL.AGEU <i>term “Years”</i></div><span class="anno err">CT04 · use YEARS</span></div>
+            <div class="crf-row"><div class="crf-field">ADSL <i>no TRTSDT, SDTM EX exists</i></div><span class="anno err">ADCR-61 · PMDA Error</span></div>
+            <div class="crf-row"><div class="crf-field">ADQSADAS.AVAL <i>derivation branches on PARAMCD</i></div><span class="anno note">Move to value-level metadata</span></div>
+            <div class="crf-row"><div class="crf-field">ADQSADAS, ADQSCIBC <i>both from QS</i></div><span class="anno note">Say which subset each holds</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how" style="padding-top: clamp(40px, 6vw, 70px)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="h2">Spec first. <em>Data second.</em></h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><h3>Point it at the spec</h3><p>Your ADaM spec workbook, in the Pinnacle 21 template or your own, or the define.xml. No reformatting.</p></div>
+          <div class="step reveal"><h3>Choose the versions</h3><p>Rules differ by ADaMIG version and terminology release, so you pick both. Nothing is assumed, and anything that couldn’t be checked is said out loud.</p></div>
+          <div class="step reveal"><h3>Fix, then check the data</h3><p>Correct the spec while it’s cheap. When datasets exist — XPT, SAS7BDAT, Dataset-JSON — run it again for the data rules and spec-versus-data checks.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="checks" style="padding-top: 0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">What it checks</span>
+          <h2 class="h2">Every rule. <em>Every citation.</em></h2>
+        </div>
+        <div class="feature-grid">
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>CDISC conformance rules</h3>
+            <p>The ADaM Conformance Rules turned into checks: the 256 a spec can answer, and all 439 dataset rules for ADaMIG 1.3. Every finding cites its rule and IG section.</p>
+          </div>
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+            <h3>The ADaM standards themselves</h3>
+            <p>Standard labels and types, required variables and the IG’s own value lists for ADaMIG 1.0–1.3, OCCDS, TTE and more, with a list of every non-standard variable to review.</p>
+          </div>
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M6 12h12M9 17h6"/></svg></div>
+            <h3>Controlled Terminology</h3>
+            <p>Codelists checked against the CDISC CT release your study uses: wrong terms, case slips, synonyms instead of submission values, extensions and NCI codes.</p>
+          </div>
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+            <h3>Define-XML, line by line</h3>
+            <p>Schema validation and CDISC’s Define-XML conformance rules, with the line of every problem: broken references, missing methods, origins, codelist aliases.</p>
+          </div>
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <h3>How PMDA and FDA see it</h3>
+            <p>Each finding shows its PMDA rule and severity, including the ones that make PMDA reject a submission, plus FDA’s technical rejection criteria and ADaM expectations.</p>
+          </div>
+          <div class="tile reveal">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Runs where your data is</h3>
+            <p>A tool on your own machine, also usable from Claude through MCP. Specs and datasets are read locally and never uploaded anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap reveal">
+        <div class="section-head">
+          <span class="eyebrow">Inside Claude</span>
+          <h2 class="h2">Ask, <em>and it validates.</em></h2>
+        </div>
+        <p class="lede">ADaM Preflight also runs as an MCP server, so Claude and other assistants can validate a spec or a folder of datasets on your machine and explain any finding — the files stay on your computer.</p>
+        <pre class="code-block"><code>claude mcp add adam-preflight -- adam-preflight mcp</code></pre>
+        <p class="download-note">Invited teams get the install steps with their access.</p>
+      </div>
+    </section>
+
+    <section class="section final" id="access">
+      <div class="wrap reveal">
+        <span class="eyebrow">Early access</span>
+        <h2 class="h2">Run your next spec <em>through it.</em></h2>
+        <p class="lede">ADaM Preflight is invite-only while we work with a first group of statistical programming teams. Leave your work email and we’ll send an invitation, usually within a day.</p>
+        <form class="contact-form" data-subject="ADaM Preflight early access" novalidate>
+          <label class="skip" for="email">Work email</label>
+          <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+          <button class="btn btn-primary" type="submit">Request early access <span class="arrow" aria-hidden="true">→</span></button>
+        </form>
+        <p class="form-note" role="status"></p>
+        <p class="download-note"><a href="preflight-proof.html">See it tested on the CDISC pilot →</a></p>
+        <p class="download-note">Questions? <a href="mailto:hello@vajrra.ai">hello@vajrra.ai</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo-mark.png" alt="" width="30" height="30" />Vajrra</a>
+          <p>Specialist AI agents for customer support, healthcare and life sciences.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul><li><a href="acrf.html">aCRF Gen</a></li><li><a href="preflight.html">ADaM Preflight</a></li><li><a href="preflight-proof.html">ADaM Preflight proof</a></li><li><a href="audit.html">Website Audit</a></li><li><a href="sample-report.html">Sample audit report</a></li><li><a href="proof.html">aCRF Gen proof</a></li><li><a href="https://github.com/himanshuoo7/CRF_Annotation" rel="noopener">aCRF Gen on GitHub</a></li><li><a href="index.html#customer-support">Support agents · soon</a></li><li><a href="index.html#healthcare">Care admin agents · soon</a></li></ul>
+        </div>
+        <div>
+          <h4>Industries</h4>
+          <ul><li><a href="index.html#life-sciences">Life sciences</a></li><li><a href="index.html#healthcare">Healthcare</a></li><li><a href="index.html#customer-support">Customer support</a></li><li><a href="index.html#website-audit">Any business</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="index.html#story">Our story</a></li><li><a href="index.html#principles">Principles</a></li><li><a href="trust.html">Trust and security</a></li><li><a href="client-ss-women-child-hospital.html">Clients</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="mailto:hello@vajrra.ai">hello@vajrra.ai</a></li></ul>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true">Vajrra</div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Vajrra. All rights reserved.</span>
+        <span>vajrra.ai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js?v=8" defer></script>
+</body>
+</html>

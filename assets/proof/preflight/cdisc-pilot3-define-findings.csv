@@ -1,0 +1,49 @@
+Severity,Rule,PMDA,Dataset,Variable,Finding
+Error,ADCR-2,,ADAE,USUBJID,"label ""Unique Subject Identified"" differs from SDTM DM.USUBJID ""Unique Subject Identifier"""
+Error,ADCR-144,,ADLBC,PARAMCD,"PARAMCD values with characters the IG does not allow: _ALB, _ALP, _ALT, _AST, _BILI, _BUN, _CA, _CHOL, _CK, _CL"
+Error,ADCR-2,,ADLBC,USUBJID,"label ""Unique Subject Identified"" differs from SDTM DM.USUBJID ""Unique Subject Identifier"""
+Error,ADCR-708,PMDA AD0018 (Warning),ADLBC,USUBJID,"label ""Unique Subject Identified"" is not the standard label ""Unique Subject Identifier"""
+Error,ADCR-509,,ADSL,DISONSDT,"label ""Date of Onset of Disease"" does not contain ""Start Date"""
+Error,ADCR-2,,ADSL,DTHFL,"label ""Subject Died?"" differs from SDTM DM.DTHFL ""Subject Death Flag"""
+Error,DEF-73,PMDA DD0042 (Error),ADSL,STUDYID,ADSL.STUDYID: origin is Derived but the ItemRef has no MethodOID
+Error,ADCR-2,,ADTTE,USUBJID,"label ""Unique Subject Identified"" differs from SDTM DM.USUBJID ""Unique Subject Identifier"""
+Error,ADCR-708,PMDA AD0018 (Warning),ADTTE,USUBJID,"label ""Unique Subject Identified"" is not the standard label ""Unique Subject Identifier"""
+Warning,DD0109,,,,"USUBJID has different origins across datasets: Derived in ADSL; Predecessor in ADADAS, ADLBC, ADTTE, ADAE"
+Warning,SPC-I08,,ADADAS,,"5 variables come from SDTM QS, which is not in the SDTM metadata given: VISIT, VISITNUM, PARAMCD, ABLFL, QSSEQ"
+Warning,ADCR-176,,ADADAS,ABLFL,"no codelist, so the rule that ABLFL may only be Y or null cannot be checked; attach one"
+Warning,ADCR-178,,ADADAS,ANL01FL,"no codelist, so the rule that ANL01FL may only be Y or null cannot be checked; attach one"
+Warning,CT08,,ADAE,AEACN,no codelist; the standard binds AEACN to CDISC codelist ACN (C66767)
+Warning,CT08,,ADAE,AESEV,no codelist; the standard binds AESEV to CDISC codelist AESEV (C66769)
+Warning,ADCR-5,,ADAE,AOCC01FL,"no codelist, so the rule that AOCC01FL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCC02FL,"no codelist, so the rule that AOCC02FL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCC03FL,"no codelist, so the rule that AOCC03FL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCC04FL,"no codelist, so the rule that AOCC04FL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCCFL,"no codelist, so the rule that AOCCFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCCPFL,"no codelist, so the rule that AOCCPFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADAE,AOCCSFL,"no codelist, so the rule that AOCCSFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-39,,ADAE,ASTDTF,"no codelist, so the rule that ASTDTF may only be D or M or Y or null cannot be checked; attach one"
+Warning,CT08,,ADAE,ASTDTF,no codelist; the standard binds ASTDTF to CDISC codelist DATEFL (C81223)
+Warning,ADCR-5,,ADAE,TRTEMFL,"no codelist, so the rule that TRTEMFL may only be Y or N or null cannot be checked; attach one"
+Warning,SPC-I08,,ADLBC,,"8 variables come from SDTM LB, which is not in the SDTM metadata given: VISIT, VISITNUM, PARAMCD, AVAL, ABLFL, LBSEQ, LBNRIND, LBSTRESN"
+Warning,ADCR-176,,ADLBC,ABLFL,"no codelist, so the rule that ABLFL may only be Y or null cannot be checked; attach one"
+Warning,ADCR-5,,ADLBC,AENTMTFL,"no codelist, so the rule that AENTMTFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-178,,ADLBC,ANL01FL,"no codelist, so the rule that ANL01FL may only be Y or null cannot be checked; attach one"
+Warning,SPC-I08,,ADLBC,SAFFL,predecessor ADSL.SAF01FL is not a variable in the spec
+Warning,ADCR-5,,ADSL,DISCONFL,"no codelist, so the rule that DISCONFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADSL,DSRAEFL,"no codelist, so the rule that DSRAEFL may only be Y or N or null cannot be checked; attach one"
+Warning,ADCR-5,,ADSL,DTHFL,"no codelist, so the rule that DTHFL may only be Y or N or null cannot be checked; attach one"
+Warning,CT08,,ADSL,DTHFL,no codelist; the standard binds DTHFL to CDISC codelist NY (C66742)
+Notice,SPC-D01,,,,"6 files the define.xml links to are not next to it: adsl.xpt, adadas.xpt, adlbc.xpt, adtte.xpt, adae.xpt, adrg.pdf"
+Notice,FDA-TCG04,,ADADAS,,numeric dates (ADT) without the SDTM ISO 8601 character dates; FDA asks to keep them for traceability
+Notice,SPC-R11,,ADADAS,,"2 character variables have no codelist: ANL01FL, AWRANGE"
+Notice,SPC-R01,,ADADAS,DTYPE,derivation branches on PARAMCD/PARAM; split it into value-level metadata
+Notice,SPC-I12,,ADAE,,"classed ADaM OTHER but has OCCDS variables, so OCCDS rules (for example TRTEMFL must be Y or null) did not run; use the OCCDS class if it fits"
+Notice,SPC-R11,,ADAE,,"11 character variables have no codelist: ASTDTF, AESEV, AEACN, TRTEMFL, AOCCFL, AOCCSFL, AOCCPFL, AOCC02FL, AOCC03FL, AOCC04FL, AOCC01FL"
+Notice,FDA-TCG02,,ADLBC,,core variables not carried into this dataset: SITEID; FDA expects the core variables an analysis needs in each ADaM dataset
+Notice,FDA-TCG04,,ADLBC,,numeric dates (ADT) without the SDTM ISO 8601 character dates; FDA asks to keep them for traceability
+Notice,SPC-R11,,ADLBC,,"2 character variables have no codelist: ANL01FL, AENTMTFL"
+Notice,SPC-R03,,ADLBC,AVISITN,origin is Assigned but nothing says how it is assigned
+Notice,SPC-R03,,ADLBC,PARCAT1,origin is Assigned but nothing says how it is assigned
+Notice,SPC-R11,,ADSL,,"5 character variables have no codelist: SITEGR1, DISCONFL, DSRAEFL, DTHFL, EOSSTT"
+Notice,SPC-R02,,ADSL,CUMDOSE,derivation is 580 characters; consider moving detail to the ADRG and summarising here
+Notice,SPC-R11,,ADTTE,,1 character variables have no codelist: EVNTDESC
